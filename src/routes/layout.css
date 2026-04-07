@@ -1,0 +1,137 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@layer base {
+	:root {
+		/* Scene: late-80s Japan night drift — asphalt, sodium vapor, worn signage */
+		--aw-bg0: #07090c;
+		--aw-bg1: #0b0f14;
+		--aw-ink: #e7e3d8;
+		--aw-ink-90: rgba(231, 227, 216, 0.9);
+		--aw-ink-85: rgba(231, 227, 216, 0.85);
+		--aw-muted: rgba(231, 227, 216, 0.72);
+		--aw-border: rgba(231, 227, 216, 0.14);
+
+		/* Accents */
+		--aw-amber: #ffb300; /* sodium streetlight */
+		--aw-amber-55: rgba(255, 179, 0, 0.55);
+		--aw-amber-45: rgba(255, 179, 0, 0.45);
+		--aw-amber-35: rgba(255, 179, 0, 0.35);
+		--aw-amber-30: rgba(255, 179, 0, 0.3);
+		--aw-amber-15: rgba(255, 179, 0, 0.15);
+		--aw-amber-10: rgba(255, 179, 0, 0.1);
+		--aw-teal: #3fbfb2; /* worn teal paint / dash lights */
+		--aw-magenta: #d23b6a; /* faded sticker / club stamp */
+	}
+
+	html,
+	body {
+		height: 100%;
+		background:
+			radial-gradient(circle at 18% 22%, rgba(255, 179, 0, 0.12), transparent 52%),
+			radial-gradient(circle at 82% 18%, rgba(63, 191, 178, 0.08), transparent 46%),
+			radial-gradient(circle at 50% 100%, rgba(210, 59, 106, 0.06), transparent 55%),
+			linear-gradient(180deg, var(--aw-bg0), var(--aw-bg1));
+		color: var(--aw-ink);
+		font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+			'Apple Color Emoji', 'Segoe UI Emoji';
+	}
+}
+
+@layer utilities {
+	.aw-scanlines {
+		position: relative;
+	}
+	.aw-scanlines::after {
+		content: '';
+		pointer-events: none;
+		position: absolute;
+		inset: 0;
+		background: repeating-linear-gradient(
+			to bottom,
+			rgba(255, 255, 255, 0.045) 0px,
+			rgba(255, 255, 255, 0.015) 2px,
+			rgba(0, 0, 0, 0) 4px
+		);
+		mix-blend-mode: overlay;
+		opacity: 0.22;
+		border-radius: inherit;
+	}
+
+	.aw-gridGlow {
+		background-image:
+			radial-gradient(circle at 50% 28%, rgba(255, 179, 0, 0.14), transparent 58%),
+			radial-gradient(circle at 75% 22%, rgba(63, 191, 178, 0.07), transparent 52%),
+			linear-gradient(rgba(231, 227, 216, 0.045) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(231, 227, 216, 0.045) 1px, transparent 1px);
+		background-size:
+			auto,
+			auto,
+			52px 52px,
+			52px 52px;
+		background-position:
+			0 0,
+			0 0,
+			center,
+			center;
+	}
+
+	.aw-glowOrange {
+		box-shadow:
+			0 0 0 1px rgba(255, 179, 0, 0.18),
+			0 0 28px rgba(255, 179, 0, 0.1),
+			0 0 80px rgba(255, 179, 0, 0.05);
+	}
+	.aw-glowBlue {
+		box-shadow:
+			0 0 0 1px rgba(63, 191, 178, 0.16),
+			0 0 28px rgba(63, 191, 178, 0.08),
+			0 0 80px rgba(63, 191, 178, 0.04);
+	}
+
+	.aw-grain {
+		position: relative;
+	}
+	.aw-grain::before {
+		content: '';
+		pointer-events: none;
+		position: absolute;
+		inset: 0;
+		background-image:
+			linear-gradient(0deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.14)),
+			repeating-linear-gradient(
+				90deg,
+				rgba(255, 255, 255, 0.02) 0px,
+				rgba(255, 255, 255, 0.02) 1px,
+				rgba(0, 0, 0, 0) 2px,
+				rgba(0, 0, 0, 0) 6px
+			),
+			repeating-linear-gradient(
+				0deg,
+				rgba(255, 255, 255, 0.015) 0px,
+				rgba(255, 255, 255, 0.015) 1px,
+				rgba(0, 0, 0, 0) 2px,
+				rgba(0, 0, 0, 0) 7px
+			);
+		mix-blend-mode: overlay;
+		opacity: 0.45;
+		border-radius: inherit;
+	}
+
+	@keyframes aw-marqueeY {
+		0% {
+			transform: translateY(0);
+		}
+		100% {
+			transform: translateY(-50%);
+		}
+	}
+	.aw-marqueeY {
+		animation: aw-marqueeY var(--aw-marquee-duration, 22s) linear infinite;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.aw-marqueeY {
+			animation: none;
+		}
+	}
+}

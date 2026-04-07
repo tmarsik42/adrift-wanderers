@@ -1,0 +1,42 @@
+[
+	{ "name": "Lurzi", "role": "Boss", "trait": "???" },
+	{ "name": "Alscend", "role": "Vicemaster", "trait": "*Classified*" },
+	{ "name": "Ji-Niya", "role": "Headmistress", "trait": "Coolest and the best" },
+	{
+		"name": "SupremeElder",
+		"role": "The Elder",
+		"trait": "Possesses 1000 years of wisdom. Remembers nothing"
+	},
+	{
+		"name": "Cangi",
+		"role": "DPS",
+		"trait": "He gud"
+	},
+	{ "name": "Oliver", "role": "Healer", "trait": "Only healer in game who can cast blind." },
+	{ "name": "Hikari-Asakura", "role": "Executioner", "trait": "9000+ kills (most of them is Oliver)."},
+	{ "name": "Abhi", "role": "Tank", "trait": "Give flower for instant clear." },
+	{ "name": "primexyro", "role": "Junior", "trait": "Raised chip prices by 9000% singlehandedly." },
+	{ "name": "Cookie", "role": "Gremlin", "trait": "Little menace." },
+	{ "name": "huego", "role": "DPS", "trait": "Present in spirit." },
+	{ "name": "KeiKei", "role": "DPS", "trait": "Vibes." },
+	{ "name": "Ale'a", "role": "DPS", "trait": "He gud."},
+	{
+		"name": "AlexPK",
+		"role": "DPS",
+		"trait": "Will PK you."
+	},
+	{ "name": "HuaSimp", "role": "Disciple", "trait": "Simps for Hua." },
+	{ "name": "Astralins", "role": "DPS", "trait": "Listens to cute music while killing." },
+	{ "name": "AzureSeraphina", "role": "DPS", "trait": "Scary bald sister." },
+	{ "name": "Bai-Jin", "role": "DPS", "trait": "Who even is this?" },
+	{ "name": "DeaThunder", "role": "DPS Machine", "trait": "It's physically impossible for him to not be n1 DPS." },
+	{ "name": "EasternRanger", "role": "Ranged DPS", "trait": "There's no rangers tho." },
+	{ "name": "Lavar", "role": "Inmate", "trait": "Currently in prison." },
+	{ "name": "Khamari", "role": "Frontline", "trait": "Always first out of danger." },
+	{ "name": "lokwen", "role": "Guild Junior #2", "trait": "Rank: Backup junior." },
+	{ "name": "Pakapakachama", "role": "Guild Artist", "trait": "Keeps morale high with fanart." },
+	{ "name": "Rinwell", "role": "DPS", "trait": "Is good. Consistently." },
+	{ "name": "Ryuga", "role": "DPS", "trait": "Also good. Suspiciously so." },
+	{ "name": "Rupertbear", "role": "Grandpa", "trait": "Vintage raid stories from the 80s." },
+	{ "name": "Sleier", "role": "DPS", "trait": "Secretly cracked at mechanics." }
+]

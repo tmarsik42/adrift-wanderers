@@ -4,7 +4,7 @@
   "compatibility_flags": [ "nodejs_compat" ],
   "main": ".svelte-kit/cloudflare/_worker.js",
   "assets": {
-    "directory": ".svelte-kit/output/client",
+    "directory": ".svelte-kit/cloudflare", // Change this from output/client
     "binding": "ASSETS"
   }
 }

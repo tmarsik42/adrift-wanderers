@@ -1,0 +1,9 @@
+{
+    "name": "adrift-wanderers",
+    "compatibility_date": "2026-04-08",
+    "main": ".svelte-kit/output/server/index.js",
+    "assets": {
+      "directory": ".svelte-kit/output/client"
+    }
+  }
+  

@@ -7,7 +7,30 @@
 	};
 
 	let { members }: Props = $props();
+
+	function getRainbowColor(index: number, totalLength: number) {
+		if (totalLength <= 1) {
+			return 'color: hsl(0, 80%, 60%)';
+		}
+		
+		const hue = (index / (totalLength - 1)) * 280;
+
+		return `color: hsl(${hue}, 80%, 60%)`;
+	}
 </script>
+
+<style>
+    .lurzi-bg {
+        position: absolute;
+        inset: 0;
+        background-image: url('../assets/blossom-pic.webp');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.3;
+        filter: brightness(0.2);
+        pointer-events: none;
+    }
+</style>
 
 <section class="mx-auto max-w-6xl px-6 py-10">
 	<div class="flex items-end justify-between gap-6">
@@ -28,6 +51,10 @@
 					m.isPro ? 'aw-glowOrange ring-1 ring-[var(--aw-amber-35)]' : 'aw-glowBlue'
 				].join(' ')}
 			>
+				{#if m.name === 'Lurzi'}
+					<div class="lurzi-bg"></div>
+				{/if}
+
 				<div class="aw-scanlines pointer-events-none absolute inset-0"></div>
 
 				<div class="relative flex items-start justify-between gap-3">
@@ -66,7 +93,15 @@
 						Trait
 					</div>
 					<div class="mt-2 text-sm font-semibold tracking-[0.12em] text-[var(--aw-ink-90)] uppercase">
-						{m.trait}
+						{#if m.name === "Lurzi"}
+							{#each m.trait as char, i}
+								<span style={getRainbowColor(i, m.trait.length)}>
+									{char === ' ' ? '\u00A0' : char}
+								</span>
+							{/each}
+						{:else}
+							{m.trait}
+						{/if}
 					</div>
 				</div>
 			</article>

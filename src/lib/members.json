@@ -1,16 +1,16 @@
 [
-	{ "name": "Lurzi", "role": "Boss", "trait": "???" },
+	{ "name": "Lurzi", "role": "Boss", "trait": "Cream Puff Gal" },
 	{ "name": "Alscend", "role": "Vicemaster", "trait": "*Classified*" },
 	{ "name": "Ji-Niya", "role": "Headmistress", "trait": "Coolest and the best" },
 	{
 		"name": "SupremeElder",
 		"role": "The Elder",
-		"trait": "Possesses 1000 years of wisdom. Remembers nothing"
+		"trait": "Will never have DaoLord talents."
 	},
 	{
 		"name": "Cangi",
 		"role": "DPS",
-		"trait": "Negotiator with a beautiful sword that has xxx with KeiKei"
+		"trait": "The handsome guild negotiator with a beautiful sword."
 	},
 	{ "name": "Oliver", "role": "Healer", "trait": "Only healer in game who can cast blind." },
 	{ "name": "Hikari-Asakura", "role": "Executioner", "trait": "9000+ kills (most of them is Oliver)."},
